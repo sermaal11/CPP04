@@ -3,7 +3,9 @@ CC = g++
 CFLAGS = -g3 -Wall -Wextra -Werror -std=c++98
 
 SRC =	    src/main.cpp \
-
+			src/Animal.cpp \
+			src/Dog.cpp \
+			src/Cat.cpp \
 
 OBJS = $(notdir $(SRC:.cpp=.o))
 OBJDIR = Polymorphism_objects
