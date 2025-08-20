@@ -6,7 +6,7 @@
 /*   By: sergio <sergio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/19 10:11:38 by sergio            #+#    #+#             */
-/*   Updated: 2025/08/19 12:09:40 by sergio           ###   ########.fr       */
+/*   Updated: 2025/08/19 14:59:30 by sergio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 Cat::Cat()
 {
 	_type = "Cat";
-	this->brain = new Brain();
 	std::cout << GREEN << "[Cat] Default constructor called" << RESET << std::endl;
+	this->brain = new Brain();
 }
 
 Cat::Cat(const Cat& other) : Animal(other)
