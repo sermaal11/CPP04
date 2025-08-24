@@ -6,7 +6,7 @@
 /*   By: sergio <sergio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/19 10:17:59 by sergio            #+#    #+#             */
-/*   Updated: 2025/08/24 21:11:01 by sergio           ###   ########.fr       */
+/*   Updated: 2025/08/24 21:19:36 by sergio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,18 @@
 
 # include <iostream>
 
-
+class Brain
+{
+	private:
+		std::string _ideas[100];
+		
+	public:
+		// OCF
+		Brain();
+		Brain(const Brain& other);
+		Brain& operator=(const Brain& other);
+		~Brain();
+};
 
 # endif
 
