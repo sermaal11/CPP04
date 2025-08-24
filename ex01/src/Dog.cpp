@@ -6,59 +6,41 @@
 /*   By: sergio <sergio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/19 10:12:32 by sergio            #+#    #+#             */
-/*   Updated: 2025/08/19 14:59:25 by sergio           ###   ########.fr       */
+/*   Updated: 2025/08/24 21:08:44 by sergio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/Dog.hpp"
 
-Dog::Dog()
+//OCF
+Dog::Dog() : Animal()
 {
 	_type = "Dog";
-	std::cout << GREEN << "[Dog] Default constructor called" << RESET << std::endl;
-	this->brain = new Brain();
+	std::cout << CYAN << "[DOG] Constructor called." << RESET << std::endl;
 }
 
-Dog::Dog(const Dog& other) : Animal(other)
+Dog::Dog(const Dog& other) 
+	: Animal(other)
 {
-	std::cout << GREEN << "[Dog] Copy constructor called" << RESET << std::endl;
-	this->brain = new Brain(*other.brain);
-	this->_type = other._type;
+	std::cout << CYAN << "[DOG] Copy constructor called." << RESET << std::endl;
 }
 
 Dog& Dog::operator=(const Dog& other)
 {
-	std::cout << GREEN << "[Dog] Assignment operator called" << RESET << std::endl;
 	if (this != &other)
-	{
 		Animal::operator=(other);
-		if (this->brain)
-			delete this->brain;
-
-		this->brain = new Brain(*other.brain);
-		this->_type = other._type;
-	}
+	std::cout << CYAN 
+			<< "[DOG] Copy assignment operator called for " 
+			<< _type << RESET << std::endl;
 	return *this;
 }
 
 Dog::~Dog()
 {
-	std::cout << RED << "[Dog] Destructor called" << RESET << std::endl;
-	delete this->brain;
+	std::cout << RED << "[DOG] Destructor called." << RESET << std::endl;
 }
 
-void Dog::makeSound() const
+void Dog::makeSound() const 
 {
-	std::cout << "Woof!" << std::endl;
+	std::cout << GREEN "[DOG] *WOOF WOOF!*" << RESET << std::endl;
 }
-
-void Dog::setIdea(int index, const std::string& idea)
-{
-	this->brain->setIdea(index, idea);
-}
-
-std::string Dog::getIdea(int index) const
-{
-	return this->brain->getIdea(index);
-}
-

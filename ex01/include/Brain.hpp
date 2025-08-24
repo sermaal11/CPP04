@@ -6,7 +6,7 @@
 /*   By: sergio <sergio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/19 10:17:59 by sergio            #+#    #+#             */
-/*   Updated: 2025/08/19 10:38:06 by sergio           ###   ########.fr       */
+/*   Updated: 2025/08/24 21:11:01 by sergio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,19 +22,7 @@
 
 # include <iostream>
 
-class Brain
-{
-	private:
-		std::string ideas[100];
-	public:
-		Brain(); // Constructor x defecto
-		Brain(const Brain& other); // Constructor x copia
-		Brain& operator=(const Brain& other); // Operador de igualacion
-		~Brain(); // Destructor x defecto
 
-		void setIdea(int index, const std::string& idea);
-		std::string getIdea(int index) const;
-};
 
 # endif
 
