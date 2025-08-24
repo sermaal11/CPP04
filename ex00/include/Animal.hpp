@@ -6,7 +6,7 @@
 /*   By: sergio <sergio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/18 12:05:06 by sergio            #+#    #+#             */
-/*   Updated: 2025/08/18 12:28:19 by sergio           ###   ########.fr       */
+/*   Updated: 2025/08/24 18:11:54 by sergio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,14 +26,19 @@ class Animal
 {
 	protected:
 		std::string _type;
+	
 	public:
-		Animal();
-		Animal(std::string animalType);
-		Animal(const Animal& other);
-		Animal& operator=(const Animal& other);
-		virtual ~Animal();
+		//OCF
+		Animal();								// COnstructor x defecto
+		Animal(const Animal& other);			// Constructor x copia
+		Animal& operator=(const Animal& other);	// Operados de asignacion
+		virtual ~Animal();						// Destructor x defecto
 
+		// Setters y Getters
+		void setType(std::string type);
 		std::string getType() const;
+
+		// Metdos
 		virtual void makeSound() const;
 };
 
