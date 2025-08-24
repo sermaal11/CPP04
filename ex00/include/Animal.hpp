@@ -6,7 +6,7 @@
 /*   By: sergio <sergio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/18 12:05:06 by sergio            #+#    #+#             */
-/*   Updated: 2025/08/24 18:11:54 by sergio           ###   ########.fr       */
+/*   Updated: 2025/08/24 18:34:32 by sergio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ class Animal
 
 		// Setters y Getters
 		void setType(std::string type);
-		std::string getType() const;
+		const std::string& getType() const;
 
 		// Metdos
 		virtual void makeSound() const;
