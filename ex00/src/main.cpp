@@ -6,7 +6,7 @@
 /*   By: sergio <sergio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/24 10:23:23 by sergio            #+#    #+#             */
-/*   Updated: 2025/08/24 18:44:18 by sergio           ###   ########.fr       */
+/*   Updated: 2025/08/24 19:22:29 by sergio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,17 +16,27 @@
 
 int main()
 {
-	Animal generic;
-	std::cout << generic.getType() << " makes: " << std::endl;
-	generic.makeSound();
+	// Prueba con Animal
+	std::cout << std::endl;
+	const Animal* metaAnimal = new Animal();
+	std::cout << metaAnimal->getType() << " makes: ";
+	metaAnimal->makeSound();
+	delete metaAnimal;
 
-	Animal copy(generic);
-	std::cout << copy.getType() << " makes: " << std::endl;
-	copy.makeSound();
+	// Prueba con Dog
+	std::cout << std::endl;
+	const Animal* metaDog = new Dog();
+	std::cout << metaDog->getType() << " makes: ";
+	metaDog->makeSound();
+	delete metaDog;
 
-	Animal assigment;
-	assigment = generic;
-	std::cout << assigment.getType() << " makes: " << std::endl;
-	assigment.makeSound();
+	// Prueba con Cat
+	std::cout << std::endl;
+	const Animal* metaCat = new Cat();
+	std::cout << metaCat->getType() << " makes: ";
+	metaCat->makeSound();
+	delete metaCat;
+
+	std::cout << std::endl;
 	return 0;
 }

@@ -6,7 +6,7 @@
 /*   By: sergio <sergio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/18 13:01:23 by sergio            #+#    #+#             */
-/*   Updated: 2025/08/24 17:44:05 by sergio           ###   ########.fr       */
+/*   Updated: 2025/08/24 19:17:04 by sergio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,17 @@
 
 #include "../include/Animal.hpp"
 
+class Cat: public Animal
+{
+	public:
+		//OCF
+		Cat();								// Constructor x defecto
+		Cat(const Cat& other);				// Constructor x copia
+		Cat& operator=(const Cat& other);	// Operador de asignacion
+		~Cat();								// Destructor
 
+		//Metodos
+		void makeSound() const;
+};
 
 #endif
