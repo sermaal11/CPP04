@@ -6,7 +6,7 @@
 /*   By: sergio <sergio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/19 10:12:07 by sergio            #+#    #+#             */
-/*   Updated: 2025/08/24 21:32:53 by sergio           ###   ########.fr       */
+/*   Updated: 2025/08/26 10:33:32 by sergio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ class Dog: public Animal
 
 		//Metodos
 		void makeSound() const;
+		void setIdea(int idx, const std::string& idea);
+		std::string getIdea(int idx) const;
 };
 
 #endif

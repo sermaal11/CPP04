@@ -6,7 +6,7 @@
 /*   By: sergio <sergio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/19 10:28:14 by sergio            #+#    #+#             */
-/*   Updated: 2025/08/24 21:29:00 by sergio           ###   ########.fr       */
+/*   Updated: 2025/08/26 10:35:04 by sergio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,4 +41,18 @@ Brain& Brain::operator=(const Brain& other)
 Brain::~Brain()
 {
 	std::cout << RED << "[BRAIN] Destructor called." << RESET << std::endl;
+}
+
+// Setter y Getter
+void Brain::setIdea(int indx, const std::string& idea)
+{
+	if (indx >= 0 && indx < 100)
+        _ideas[indx] = idea;
+}
+
+std::string Brain::getIdea(int indx) const
+{
+	if (indx >= 0 && indx < 100)
+        return _ideas[indx];
+    return "";
 }

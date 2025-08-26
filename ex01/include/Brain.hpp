@@ -6,7 +6,7 @@
 /*   By: sergio <sergio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/19 10:17:59 by sergio            #+#    #+#             */
-/*   Updated: 2025/08/24 21:19:36 by sergio           ###   ########.fr       */
+/*   Updated: 2025/08/26 10:30:05 by sergio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,10 @@ class Brain
 		Brain(const Brain& other);
 		Brain& operator=(const Brain& other);
 		~Brain();
+
+		// Setter y Getter
+		void setIdea(int indx, const std::string& idea);
+		std::string getIdea(int indx) const;
 };
 
 # endif

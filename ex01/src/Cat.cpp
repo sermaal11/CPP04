@@ -6,7 +6,7 @@
 /*   By: sergio <sergio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/19 10:11:38 by sergio            #+#    #+#             */
-/*   Updated: 2025/08/24 21:41:32 by sergio           ###   ########.fr       */
+/*   Updated: 2025/08/26 10:34:40 by sergio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,18 @@ Cat::~Cat()
 	std::cout << RED << "[CAT] Destructor called." << RESET << std::endl;
 }
 
+// Metodos
 void Cat::makeSound() const 
 {
 	std::cout << GREEN "[CAT] *MIAU MIAU!*" << RESET << std::endl;
+}
+
+void Cat::setIdea(int idx, const std::string& idea) 
+{
+    _brain->setIdea(idx, idea);
+}
+
+std::string Cat::getIdea(int idx) const 
+{
+    return _brain->getIdea(idx);
 }
