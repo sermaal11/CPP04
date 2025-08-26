@@ -6,7 +6,7 @@
 /*   By: sergio <sergio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/19 10:12:07 by sergio            #+#    #+#             */
-/*   Updated: 2025/08/24 21:09:28 by sergio           ###   ########.fr       */
+/*   Updated: 2025/08/24 21:32:53 by sergio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,13 @@
 # define DOG_HPP
 
 #include "../include/Animal.hpp"
+#include "../include/Brain.hpp"
 
 class Dog: public Animal
 {
+	private:
+		Brain* _brain;
+
 	public:
 		//OCF
 		Dog();								// Constructor x defecto
