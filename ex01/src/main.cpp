@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sergio <sergio@student.42.fr>              +#+  +:+       +#+        */
+/*   By: smarin-a <smarin-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/19 10:09:21 by sergio            #+#    #+#             */
-/*   Updated: 2025/08/26 10:28:18 by sergio           ###   ########.fr       */
+/*   Updated: 2025/08/26 12:52:46 by smarin-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,12 +42,12 @@ int main()
     std::cout << "\n[3] Array polimórfico\n";
     const int n = 4;
     Animal* zoo[n];
-    zoo[0] = new Dog();
-    zoo[1] = new Cat();
-    zoo[2] = new Dog();
-    zoo[3] = new Cat();
     for (int i = 0; i < n; ++i) 
 	{
+        if (i % 2)
+            zoo[i] = new Dog();
+        else
+            zoo[i] = new Cat();
         std::cout << zoo[i]->getType() << " makes: ";
         zoo[i]->makeSound();
     }
