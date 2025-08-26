@@ -4,6 +4,7 @@ CFLAGS = -g3 -Wall -Wextra -Werror -std=c++98
 
 SRC = 		src/main.cpp \
 			src/Animal.cpp \
+			src/AAnimal.cpp \
 			src/Dog.cpp \
 			src/Cat.cpp \
 			src/Brain.cpp

@@ -6,7 +6,7 @@
 /*   By: sergio <sergio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/19 10:12:32 by sergio            #+#    #+#             */
-/*   Updated: 2025/08/26 10:34:09 by sergio           ###   ########.fr       */
+/*   Updated: 2025/08/26 11:06:49 by sergio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 //OCF
 Dog::Dog() 
-	: Animal(), _brain(new Brain())
+	: AAnimal(), _brain(new Brain())
 {
 	_type = "Dog";
 	std::cout << CYAN << "[DOG] Constructor called." << RESET << std::endl;
 }
 
 Dog::Dog(const Dog& other) 
-	: Animal(other), _brain(new Brain(*other._brain))
+	: AAnimal(other), _brain(new Brain(*other._brain))
 {
 	std::cout << CYAN << "[DOG] Copy constructor called." << RESET << std::endl;
 }
@@ -30,7 +30,7 @@ Dog& Dog::operator=(const Dog& other)
 {
 	if (this != &other)
 	{
-		Animal::operator=(other);
+		AAnimal::operator=(other);
 		*_brain = *other._brain;
 	}
 	std::cout << CYAN 

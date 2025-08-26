@@ -6,7 +6,7 @@
 /*   By: sergio <sergio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/19 10:11:38 by sergio            #+#    #+#             */
-/*   Updated: 2025/08/26 10:34:40 by sergio           ###   ########.fr       */
+/*   Updated: 2025/08/26 11:07:10 by sergio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 //OCF
 Cat::Cat() 
-	: Animal(), _brain(new Brain())
+	: AAnimal(), _brain(new Brain())
 {
 	_type = "Cat";
 	std::cout << CYAN << "[CAT] Constructor called." << RESET << std::endl;
 }
 
 Cat::Cat(const Cat& other) 
-	: Animal(other), _brain(new Brain(*other._brain))
+	: AAnimal(other), _brain(new Brain(*other._brain))
 {
 	std::cout << CYAN << "[CAT] Copy constructor called." << RESET << std::endl;
 }
@@ -30,7 +30,7 @@ Cat& Cat::operator=(const Cat& other)
 {
 	if (this != &other)
 	{
-		Animal::operator=(other);
+		AAnimal::operator=(other);
 		*_brain = *other._brain;
 	}
 	std::cout << CYAN 

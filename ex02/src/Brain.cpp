@@ -6,7 +6,7 @@
 /*   By: sergio <sergio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/19 10:28:14 by sergio            #+#    #+#             */
-/*   Updated: 2025/08/26 10:35:04 by sergio           ###   ########.fr       */
+/*   Updated: 2025/08/26 11:15:28 by sergio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 // OCF
 Brain::Brain()
 {
-	std::cout << CYAN << "[BRAIN] Default constructor called." << RESET << std::endl;
+	std::cout << CYAN << "[BRAIN] Constructor called." << RESET << std::endl;
 }
 
 Brain::Brain(const Brain& other)
